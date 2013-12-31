@@ -1,0 +1,65 @@
+.missiles {
+  overflow: hidden;
+
+  > li {
+    @include transition(
+      opacity $default-transition
+    );
+
+    span {
+      @include transform(rotate(25deg) translateX(.075em));
+      @include transition(
+        opacity $default-transition,
+        color $default-transition
+      );
+
+      &.full {
+        opacity: 1;
+        color: $color-white;
+      }
+
+      &.empty {
+        opacity: .25;
+        color: $color-white;
+        
+        @include animation(missile-empty 1s 1 linear forwards .65s);
+      }
+    }
+  }
+
+  &.not-connected {
+    > li {
+      opacity: 0;
+    }
+  }
+
+  &.connected {
+    > li {
+      opacity: 1;
+    }
+  }
+}
+
+
+@include keyframes(missile-empty) {
+  0% {
+    color: $color-white;
+  }
+
+  50% {
+    opacity: 0;
+    color: $color-white;
+    @include transform(rotate(25deg) translateX(.075em) translateY(-200%));
+  }
+
+  75% {
+    opacity: 0;
+    color: $color-red;
+    @include transform(rotate(25deg) translateX(.075em) translateY(0));
+  }
+
+  100% {
+    opacity: .25;
+    color: $color-red;
+  }
+}

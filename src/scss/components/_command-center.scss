@@ -1,0 +1,34 @@
+.command-center {
+  @extend %global--wrapper;
+
+  background: rgba($color-black, .25);
+  border-radius: .75em 0 0 0;
+  box-shadow: 
+    0 0 0 1.5em rgba($color-black, .25)
+  ;
+  border: .25em solid rgba($color-red, 1);
+  padding: $default-spacing;
+
+  background: $color-black;
+  background-size: 100% .2em;
+
+  @include background-image(
+    linear-gradient(top, rgba($color-green, .075) 50%, transparent 50%)
+  );
+
+  @include breakpoint(small) {
+    font-size: .825em;
+  }
+
+  @include animation(scanlines 50s linear forwards infinite);
+}
+
+@include keyframes(scanlines) {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 0 100%;
+  }
+}

@@ -1,0 +1,57 @@
+.button {
+  font: inherit;
+  font-size: 2em;
+  padding: $default-padding;
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+
+  border: none;
+  color: $color-red;
+  background: transparent;
+  box-shadow: 
+    0 0 .35em rgba($color-green, .75),
+    inset 0 0 0 .1em rgba($color-green, .5),
+    inset 0 0 0 .2em rgba($color-black, 1),
+    inset 0 0 0 .3em rgba($color-green, 1)
+  ;
+  border-radius: .75em 0 0 0;
+  outline: none;
+
+  @include transition(
+    background $default-transition,
+    color $default-transition
+  );
+
+
+  &:hover,
+  &.active {
+    background: $color-red;
+    color: $color-green;
+  }
+
+
+  &.button__fire {
+    min-height: $default-spacing * 8 + .3em;
+
+    @include breakpoint(small) {
+      min-height: $default-spacing * 3;
+    }
+
+    > span {
+      font-size: 4em;
+    }
+  }
+
+  &.button__refresh {
+    font-size: 1em;
+    box-shadow: none;
+    text-align: center;
+    border-radius: 0;
+    padding: $default-padding 0;
+
+    &:hover {
+      background: none;
+    }
+  }
+}

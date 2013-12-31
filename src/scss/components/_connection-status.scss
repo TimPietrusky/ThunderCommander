@@ -1,0 +1,31 @@
+.connection-status {
+
+  padding-left: $default-spacing / 2 !important;
+
+  %status {
+    border-right: none !important;
+    border-radius: $default-spacing / 2 0 0 0;
+    @include transition(
+      box-shadow $default-transition,
+      color $default-transition
+    );
+  }
+
+  .connected {
+    @extend %status;
+
+    color: $color-green;
+    box-shadow:
+      inset 0 0 0 .15em rgba($color-green, .5)
+    ;
+  }
+
+  .not-connected {
+    @extend %status;
+
+    color: $color-red;
+    box-shadow:
+      inset 0 0 0 .15em rgba($color-red, .5)
+    ;
+  }
+}

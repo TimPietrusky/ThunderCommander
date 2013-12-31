@@ -1,0 +1,46 @@
+.box {
+  @extend .cf;
+
+  border: none;
+  color: $color-red;
+  background: transparent;
+  box-shadow: 
+    0 0 .35em * 2 rgba($color-green, .75),
+    inset 0 0 0 .1em * 2 rgba($color-green, .5),
+    inset 0 0 0 .2em * 2 rgba($color-black, 1),
+    inset 0 0 0 .3em * 2 rgba($color-green, 1)
+  ;
+  border-radius: .75em * 2 0 0 0;
+  padding: 1.435em .6em;
+
+  > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      height: 100%;
+      padding: $default-padding 0;
+      text-align: center;
+
+      &:nth-child(n):not(:last-child) {
+        border-right: .15em solid rgba($color-green, .5);
+      }
+     
+      &:last-child:not(:first-child) {
+        border: none;
+        padding: 0;
+
+        span {
+          @include transform(none);
+          @include transition(none);
+        }
+      }
+
+      span {
+        font-size: 2em;
+        display: inline-block;
+      }
+    }
+  }
+}

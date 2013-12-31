@@ -1,0 +1,39 @@
+.radar {
+  position: relative;
+  overflow: hidden;
+
+  h2 {
+    color: rgba($color-white, .5);
+  }
+
+  .radar__needle {
+    position: absolute;  
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 1em;
+    height: 100%;
+
+    &.connected {
+      background: rgba($color-red, .5);
+      box-shadow: 
+        .3em 0 0 .15em rgba($color-red, .15),
+        .6em 0 0 .15em rgba($color-red, .15),
+        -.3em 0 0 .15em rgba($color-red, .15),
+        -.6em 0 0 .15em rgba($color-red, .15)
+      ;
+
+      @include animation(radar-needle 3.5s ease-in-out forwards infinite);
+    }
+  }
+}
+
+@include keyframes(radar-needle) {
+  0%, 100% {
+    left: -15%;
+  }
+
+  50% {
+    left: 110%;
+  }
+}

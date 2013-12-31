@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html ng-app="ThunderCommander">
+<head>
+
+  <title>Thunder Commander</title>
+  
+  <meta charset="utf-8">
+  <meta name="author" content="Tim Pietrusky">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+  <body ng-controller="CommandCenterController" ng-keydown="sendKey($event)" ng-keyup="sendKey($event)">
+    <header class="top-header">
+      <div class="gw">
+        <div class="g one-whole">
+          <h1>Thunder <span class="icon-residentevil"></span> Commander</h1>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="command-center">
+
+      <div class="gw">
+        <div class="g one-third small-one-whole">
+
+          <!-- Movement -->
+          <div class="gw gw--same-distances">
+            <div class="g one-whole">
+              <button class="button" ng-class="{'active': currentCommand == 'up' }" ng-mousedown="sendCommand('up')" ng-mouseup="sendCommand('stop')">
+                <span class="icon-up"></span>
+              </button>
+            </div>
+            <div class="g one-half">
+              <button class="button" ng-class="{'active': currentCommand == 'left' }" ng-mousedown="sendCommand('left')" ng-mouseup="sendCommand('stop')">
+                 <span class="icon-left"></span>
+              </button>
+            </div>
+            <div class="g one-half">
+              <button class="button" ng-class="{'active': currentCommand == 'right' }" ng-mousedown="sendCommand('right')" ng-mouseup="sendCommand('stop')">
+                <span class="icon-right"></span>
+              </button>
+            </div>
+            <div class="g one-whole">
+              <button class="button" ng-class="{'active': currentCommand == 'down' }" ng-mousedown="sendCommand('down')" ng-mouseup="sendCommand('stop')">
+                <span class="icon-down"></span>
+              </button>
+            </div>
+          </div>
+          <!-- /Movement -->
+
+        </div>
+       
+
+
+       
+
+        <div class="g one-third small-one-whole">
+
+          <!-- Fire -->
+          <div class="gw gw--same-distances">
+            <div class="g one-whole">
+              <button class="button button__fire" ng-class="{'active': currentCommand == 'fire' }" ng-mousedown="sendCommand('fire')" ng-mouseup="currentCommand = stop">
+                <span class="icon-crosshair3"></span>
+              </button>
+            </div>
+          </div>
+          <!-- /Fire -->
+
+        </div>
+        
+
+
+
+
+        <div class="g one-third small-one-whole">
+
+          <div class="gw gw--same-distances">
+
+
+
+            <!-- Missiles -->
+            <div class="g one-whole">
+              <div class="box">
+
+                <ul class="missiles" ng-class="{'connected': connected, 'not-connected': !connected}">
+                  <li class="g one-fifth small-one-quarter" ng-repeat="missile in missiles">
+                    <span class="icon-rocket" ng-class="{full: missile.active, empty: !missile.active}"></span>
+                  </li>
+
+                   <!-- Refresh missiles -->
+                  <li class="g one-fifth small-one-whole">
+                    <button class="button button__refresh" ng-click="refreshMissiles()">
+                      <span class="icon-refresh"></span>
+                    </button>
+                  </li>
+                   <!-- /Refresh missiles -->
+                </ul>
+              </div>
+            </div>
+            <!-- /Missiles -->
+
+
+
+            <!-- Radar -->
+            <div class="g one-whole">
+              <div class="box">
+
+                <ul class="radar">
+                  <li class="g one-whole small-one-whole">
+                    <div class="radar__needle" ng-class="{'connected': connected, 'not-connected': !connected}"></div>
+                    <h2 ng-if="!connected">&nbsp;</h2>
+                    <h2 ng-if="connected && (currentCommand == '' || currentCommand == 'connect' || currentCommand == 'stop' || currentCommand == 'ledOn')">&nbsp;</h2>
+                    <h2 ng-if="connected && (currentCommand != '' && currentCommand != 'connect' && currentCommand != 'stop' && currentCommand != 'ledOn')">{{currentCommand}}</h2>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <!-- /Radar -->
+
+
+
+            <!-- Connection status -->
+            <div class="g one-whole">
+              <div class="box">
+
+                <ul class="connection-status">
+                  <li class="g four-fifths small-one-whole" ng-class="{'connected': connected, 'not-connected': !connected}">
+                    <h2 ng-cloak>{{connectionMessage}}</h2>
+                  </li>
+
+                   <!-- Refresh status -->
+                  <li class="g one-fifth small-one-whole">
+                    <button class="button button__refresh" ng-click="refreshStatus()">
+                      <span class="icon-refresh"></span>
+                    </button>
+                  </li>
+                   <!-- /Refresh status -->
+                </ul>
+
+              </div>
+            </div>
+            <!-- /Connection status -->
+
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+      
+    </div>
+
+  </body>
+
+  <script src="js/scripts.min.js"></script>
+</html>

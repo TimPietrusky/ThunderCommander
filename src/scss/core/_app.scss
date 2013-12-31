@@ -1,0 +1,41 @@
+* {
+  @include box-sizing(border-box);
+}
+
+
+
+
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font: 400 1em/1.6 $default-font;
+  color: $default-color;
+  overflow-x: hidden;
+  margin: 0;
+  background: $color-black;
+  background-size: 100% .2em;
+
+  @include background-image(
+    linear-gradient(top, rgba($color-green, .15) 50%, transparent 50%)
+  );
+}
+
+
+
+
+
+// A global wrapper for the whole page
+%global--wrapper {
+  // padding: 0 10em;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include breakpoint(small) {
+    padding: 0 $default-spacing;
+  }
+}
