@@ -9,7 +9,10 @@ Control your USB Thunder Missile Launcher with a web application based on [node]
 
 ### node
 
-[Install node](http://nodejs.org/download/) if you don't have it
+[Install node](http://nodejs.org/download/) if you don't have it.
+
+
+
 
 
 
@@ -26,16 +29,49 @@ Please contact me or create an issue if you need assistance for Windows.
 
 
 
-### Dependencies
 
+
+
+### Clone the repository
+
+```
+git clone git@github.com:TimPietrusky/ThunderCommander.git
+```
+
+
+
+
+
+### Switch into the folder
+```
+cd ThunderCommander
+```
+
+
+
+
+### Get dependencies
 #### Linux
-
 ```
 sudo npm install
 ```
-
 #### Windows & Mac
 Please contact me or create an issue if you need assistance for Windows.
+
+
+
+
+## Start the application
+```
+sudo node app
+```
+
+The application is now available under [http://localhost:1337](http://localhost:1337). If you want to change the port you have to edit the ```app.js``` file:
+
+```javasript
+// Listen on port for connection
+app.listen(1337);
+```
 
 
 
