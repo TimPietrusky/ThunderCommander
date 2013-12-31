@@ -24,10 +24,10 @@
     "grunt-contrib-clean": "~0.5.0",
     "node-hid": "~0.3.1",
     "express": "~3.4.7",
-    "thunder-commander": "~0.0.1"
+    "thunder-connector": "~0.0.1"
   },
   "dependencies": {
     "express": "~3.4.7",
-    "thunder-commander": "~0.0.1"
+    "thunder-connector": "~0.0.1"
   }
 }
