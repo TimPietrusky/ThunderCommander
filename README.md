@@ -12,7 +12,7 @@ Control your USB Thunder Missile Launcher with a web application based on [node]
 
 
 ### libusb
-You need libusb in order to install the dependencies.
+You need [libusb](http://www.libusb.org/) in order to install the dependencies.
 
 #### Linux
 ```
