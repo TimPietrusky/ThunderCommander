@@ -61,6 +61,7 @@ Please contact me or create an issue if you need assistance for Windows.
 
 
 
+
 ## Start the application
 ```
 sudo node app
@@ -72,6 +73,12 @@ The application is now available under [http://localhost:1337](http://localhost:
 // Listen on port for connection
 app.listen(1337);
 ```
+
+
+
+
+## Thunder Connector
+In order to connect this web application with the real USB device I created the node module [thunder-connector](https://npmjs.org/package/thunder-connector). 
 
 
 
