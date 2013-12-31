@@ -25,7 +25,7 @@ sudo apt-get install build-essential pkg-config libusb-1.0-0-dev
 ```
 
 #### Windows & Mac
-Please contact me or create an issue if you need assistance for Windows.
+Please contact me or create an issue if you need assistance.
 
 
 
@@ -56,7 +56,7 @@ cd ThunderCommander
 sudo npm install
 ```
 #### Windows & Mac
-Please contact me or create an issue if you need assistance for Windows.
+Please contact me or create an issue if you need assistance.
 
 
 
