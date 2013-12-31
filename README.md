@@ -4,6 +4,32 @@ Control your USB Thunder Missile Launcher with a web application based on [node]
 
 ![Thunder Commander - connected device](assets/images/thunder_commander_screenshot_connected.png)
 
+
+
+
+
+## Features
+
+* Works in every browser & system
+* Responsive
+* Control with mouse / touch / keyboard
+
+
+
+
+
+## Keyboard controls
+
+* Left arrow: Turn left
+* Right arrow: Turn right
+* Up arrow: Turn up
+* Down arrow: Turn down
+* Space: Fire missile
+
+
+
+
+
 ## Install
 
 
