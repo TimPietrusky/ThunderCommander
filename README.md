@@ -134,4 +134,4 @@ That's why I started the third time from scratch with the [node-hid](https://git
 
 ## Author
 
-2013 by [http://twitter.com/TimPietrusky](Tim Pietrusky)
+2013 by [Tim Pierusky](http://twitter.com/TimPietrusky)
