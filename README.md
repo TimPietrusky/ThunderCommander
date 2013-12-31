@@ -92,6 +92,7 @@ That's why I started the third time from scratch with the [node-hid](https://git
 ## Thanks
 
 * Nathan Milford for creating [stormLauncher](https://github.com/nmilford/stormLauncher), because I copied the USB commando codes from his project
+* Charley Drake from [Dream Cheeky](http://dreamcheeky.com), because he gave me the original Developer Manual for the [Thunder Missile Launcher](http://dreamcheeky.com/thunder-missile-launcher) 
 
 
 
