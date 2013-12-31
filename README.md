@@ -2,6 +2,8 @@
 
 Control your USB Thunder Missile Launcher with a web application based on [node](http://nodejs.org/), [express](http://expressjs.com) and [AngularJS](http://angularjs.org). 
 
+![Thunder Commander - connected device](assets/images/thunder_commander_screenshot_connected.png)
+
 ## Install
 
 
