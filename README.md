@@ -2,7 +2,7 @@
 
 Control your USB [Thunder Missile Launcher](http://www.dreamcheeky.com/thunder-missile-launcher) with a web application based on [node](http://nodejs.org/), [express](http://expressjs.com) and [AngularJS](http://angularjs.org) in a web browser of your choice. 
 
-You can see a live demo of the frontend (without a connected device) here: [Thunder Commander client demo](http://codepen.io/TimPietrusky/pen/tuBvG).
+You can see a live demo of the frontend (without a connected device) here: [Thunder Commander client demo](http://codepen.io/TimPietrusky/full/tuBvG).
 
 ![Thunder Commander - connected device](assets/images/thunder_commander_screenshot_connected.png)
 
