@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-  
+
 </head>
 
   <body ng-controller="CommandCenterController" ng-keydown="sendKey($event)" ng-keyup="sendKey($event)">
@@ -115,11 +115,11 @@
                   <li class="g one-whole small-one-whole">
                     <div class="radar__needle" ng-class="{'connected': connected, 'not-connected': !connected}"></div>
                     <h2 ng-if="!connected">&nbsp;</h2>
-                    <h2 ng-if="connected && (currentCommand == '' || currentCommand == 'connect' || currentCommand == 'stop' || currentCommand == 'ledOn')">&nbsp;</h2>
+                    <h2 ng-if="connected && (currentCommand == null || currentCommand === '' || currentCommand == 'connect' || currentCommand == 'stop' || currentCommand == 'ledOn')">&nbsp;</h2>
                     <h2 ng-if="connected && (currentCommand != '' && currentCommand != 'connect' && currentCommand != 'stop' && currentCommand != 'ledOn')">{{currentCommand}}</h2>
                   </li>
                 </ul>
-                
+
               </div>
             </div>
             <!-- /Radar -->
