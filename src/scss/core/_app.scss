@@ -18,13 +18,146 @@ body {
   overflow-x: hidden;
   margin: 0;
   background: $color-black;
-  background-size: 100% .2em;
 
-  @include background-image(
-    linear-gradient(top, rgba($color-green, .15) 50%, transparent 50%)
-  );
+
+
+
+  h1,
+  .button,
+  .box[data-name="missiles"],
+  .box[data-name="radar"] {
+    opacity: .25;
+  }
+
+
+  // Not connected to the USB Device
+  &.not-connected {
+    // The elements in activated state
+    $thundercommander-deactivate: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards;
+
+    h1, 
+    .button,
+    .box[data-name="missiles"],
+    .box[data-name="radar"] {
+      @include animation($thundercommander-deactivate);
+    }
+
+    .button {
+      @include animation($thundercommander-deactivate .325s);
+    }
+
+    .box[data-name="missiles"] {
+      @include animation($thundercommander-deactivate .475s);
+    }
+
+    .box[data-name="radar"] {
+      @include animation($thundercommander-deactivate .15s);
+    }
+  }
+
+
+
+
+
+  // Connexted to the USB Device
+  &.connected {
+    @include animation(ThunderCommander_background_alarm 7.5s infinite ease-in-out);
+
+    // The elements in activated state
+    $thundercommander-activate: ThunderCommander_activate .65s 1 ease-in-out forwards;
+
+    h1,
+    .button,
+    .box[data-name="missiles"],
+    .box[data-name="radar"] {
+      @include animation($thundercommander-activate -.35s);
+    }
+
+    .button {
+      @include animation($thundercommander-activate .325s);
+    }
+
+    .box[data-name="missiles"] {
+      @include animation($thundercommander-activate .475s);
+    }
+
+    .box[data-name="radar"] {
+      @include animation($thundercommander-activate .15s);
+    }
+  }
+
+
+
+
+
 }
 
+
+@include keyframes(ThunderCommander_background_alarm) {
+  0%, 25%, 100% {
+    background: $color-black;
+  }
+
+  25% {
+    background: darken($color-red, 15%);
+  }
+
+  50%, 75% {
+    background: $color-black;
+  }
+
+  75% {
+    background: darken($color-green, 15%);
+  }
+}
+
+
+@include keyframes(ThunderCommander_activate) {
+  0%, 25% {
+    opacity: .25;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+@include keyframes(ThunderCommander_deactivate) {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .25;
+  }
+}
+
+
+
+/*
+  0%, 25% {
+    opacity: .5;
+  }
+
+  25% {
+    opacity: .75;
+  }
+
+  50%, 75% {
+    opacity: .45;
+  }
+
+  75% {
+    opacity: .55;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  */
 
 
 

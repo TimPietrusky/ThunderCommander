@@ -61,7 +61,7 @@ ThunderCommander.controller('CommandCenterController', ['$scope', '$http',
         // Could not connect to device
         if (data.result === 'not connected') {
           $scope.connected = false;
-          $scope.connectionMessage = 'offline';
+          $scope.connectionMessage = 'connection lost';
         }
 
         // Connection to device was successful

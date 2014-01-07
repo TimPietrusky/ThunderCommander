@@ -17,3 +17,18 @@ $default-color: $color-white;
 $default-transition-duration: .15s;
 $default-transition-function: ease-in-out;
 $default-transition: $default-transition-duration $default-transition-function;
+
+
+
+
+
+// Animaton - Properties
+$default-animation-duration: 0s;
+$default-animation-timing-function: linear;
+$default-animation-delay: 0s;
+$default-animation-iteration-count: infinite;
+$default-animation-direction: normal;
+$default-animation-fill-mode: none;
+
+// Animation - Shorthand
+$default-animation: $default-animation-duration $default-animation-timing-function $default-animation-delay $default-animation-iteration-count $default-animation-direction $default-animation-fill-mode;

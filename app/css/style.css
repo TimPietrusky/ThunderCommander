@@ -1049,21 +1049,296 @@ body {
   overflow-x: hidden;
   margin: 0;
   background: #010101;
-  background-size: 100% .2em;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, rgba(5, 130, 122, 0.15)), color-stop(50%, transparent));
-  background-image: -webkit-linear-gradient(top, rgba(5, 130, 122, 0.15) 50%, transparent 50%);
-  background-image: -moz-linear-gradient(top, rgba(5, 130, 122, 0.15) 50%, transparent 50%);
-  background-image: -o-linear-gradient(top, rgba(5, 130, 122, 0.15) 50%, transparent 50%);
-  background-image: linear-gradient(top, rgba(5, 130, 122, 0.15) 50%, transparent 50%);
+}
+/* line 28, ../../src/scss/core/_app.scss */
+body h1,
+body .button,
+body .box[data-name="missiles"],
+body .box[data-name="radar"] {
+  opacity: .25;
+}
+/* line 41, ../../src/scss/core/_app.scss */
+body.not-connected h1,
+body.not-connected .button,
+body.not-connected .box[data-name="missiles"],
+body.not-connected .box[data-name="radar"] {
+  -webkit-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards;
+  -moz-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards;
+  -o-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards;
+  animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards;
+}
+/* line 45, ../../src/scss/core/_app.scss */
+body.not-connected .button {
+  -webkit-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.325s;
+  -moz-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.325s;
+  -o-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.325s;
+  animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.325s;
+}
+/* line 49, ../../src/scss/core/_app.scss */
+body.not-connected .box[data-name="missiles"] {
+  -webkit-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.475s;
+  -moz-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.475s;
+  -o-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.475s;
+  animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.475s;
+}
+/* line 53, ../../src/scss/core/_app.scss */
+body.not-connected .box[data-name="radar"] {
+  -webkit-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.15s;
+  -moz-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.15s;
+  -o-animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.15s;
+  animation: ThunderCommander_deactivate 1.35s 1 ease-in-out forwards 0.15s;
+}
+/* line 63, ../../src/scss/core/_app.scss */
+body.connected {
+  -webkit-animation: ThunderCommander_background_alarm 7.5s infinite ease-in-out;
+  -moz-animation: ThunderCommander_background_alarm 7.5s infinite ease-in-out;
+  -o-animation: ThunderCommander_background_alarm 7.5s infinite ease-in-out;
+  animation: ThunderCommander_background_alarm 7.5s infinite ease-in-out;
+}
+/* line 72, ../../src/scss/core/_app.scss */
+body.connected h1,
+body.connected .button,
+body.connected .box[data-name="missiles"],
+body.connected .box[data-name="radar"] {
+  -webkit-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards -0.35s;
+  -moz-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards -0.35s;
+  -o-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards -0.35s;
+  animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards -0.35s;
+}
+/* line 76, ../../src/scss/core/_app.scss */
+body.connected .button {
+  -webkit-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.325s;
+  -moz-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.325s;
+  -o-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.325s;
+  animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.325s;
+}
+/* line 80, ../../src/scss/core/_app.scss */
+body.connected .box[data-name="missiles"] {
+  -webkit-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.475s;
+  -moz-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.475s;
+  -o-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.475s;
+  animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.475s;
+}
+/* line 84, ../../src/scss/core/_app.scss */
+body.connected .box[data-name="radar"] {
+  -webkit-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.15s;
+  -moz-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.15s;
+  -o-animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.15s;
+  animation: ThunderCommander_activate 0.65s 1 ease-in-out forwards 0.15s;
 }
 
-/* line 33, ../../src/scss/core/_app.scss */
+@-webkit-keyframes ThunderCommander_background_alarm {
+  /* line 97, ../../src/scss/core/_app.scss */
+  0%, 25%, 100% {
+    background: #010101;
+  }
+
+  /* line 101, ../../src/scss/core/_app.scss */
+  25% {
+    background: #500a1f;
+  }
+
+  /* line 105, ../../src/scss/core/_app.scss */
+  50%, 75% {
+    background: #010101;
+  }
+
+  /* line 109, ../../src/scss/core/_app.scss */
+  75% {
+    background: #023835;
+  }
+}
+
+@-moz-keyframes ThunderCommander_background_alarm {
+  /* line 97, ../../src/scss/core/_app.scss */
+  0%, 25%, 100% {
+    background: #010101;
+  }
+
+  /* line 101, ../../src/scss/core/_app.scss */
+  25% {
+    background: #500a1f;
+  }
+
+  /* line 105, ../../src/scss/core/_app.scss */
+  50%, 75% {
+    background: #010101;
+  }
+
+  /* line 109, ../../src/scss/core/_app.scss */
+  75% {
+    background: #023835;
+  }
+}
+
+@-o-keyframes ThunderCommander_background_alarm {
+  /* line 97, ../../src/scss/core/_app.scss */
+  0%, 25%, 100% {
+    background: #010101;
+  }
+
+  /* line 101, ../../src/scss/core/_app.scss */
+  25% {
+    background: #500a1f;
+  }
+
+  /* line 105, ../../src/scss/core/_app.scss */
+  50%, 75% {
+    background: #010101;
+  }
+
+  /* line 109, ../../src/scss/core/_app.scss */
+  75% {
+    background: #023835;
+  }
+}
+
+@keyframes ThunderCommander_background_alarm {
+  /* line 97, ../../src/scss/core/_app.scss */
+  0%, 25%, 100% {
+    background: #010101;
+  }
+
+  /* line 101, ../../src/scss/core/_app.scss */
+  25% {
+    background: #500a1f;
+  }
+
+  /* line 105, ../../src/scss/core/_app.scss */
+  50%, 75% {
+    background: #010101;
+  }
+
+  /* line 109, ../../src/scss/core/_app.scss */
+  75% {
+    background: #023835;
+  }
+}
+
+@-webkit-keyframes ThunderCommander_activate {
+  /* line 116, ../../src/scss/core/_app.scss */
+  0%, 25% {
+    opacity: .25;
+  }
+
+  /* line 120, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes ThunderCommander_activate {
+  /* line 116, ../../src/scss/core/_app.scss */
+  0%, 25% {
+    opacity: .25;
+  }
+
+  /* line 120, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes ThunderCommander_activate {
+  /* line 116, ../../src/scss/core/_app.scss */
+  0%, 25% {
+    opacity: .25;
+  }
+
+  /* line 120, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ThunderCommander_activate {
+  /* line 116, ../../src/scss/core/_app.scss */
+  0%, 25% {
+    opacity: .25;
+  }
+
+  /* line 120, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes ThunderCommander_deactivate {
+  /* line 129, ../../src/scss/core/_app.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 133, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: .25;
+  }
+}
+
+@-moz-keyframes ThunderCommander_deactivate {
+  /* line 129, ../../src/scss/core/_app.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 133, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: .25;
+  }
+}
+
+@-o-keyframes ThunderCommander_deactivate {
+  /* line 129, ../../src/scss/core/_app.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 133, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: .25;
+  }
+}
+
+@keyframes ThunderCommander_deactivate {
+  /* line 129, ../../src/scss/core/_app.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 133, ../../src/scss/core/_app.scss */
+  100% {
+    opacity: .25;
+  }
+}
+
+/*
+  0%, 25% {
+    opacity: .5;
+  }
+
+  25% {
+    opacity: .75;
+  }
+
+  50%, 75% {
+    opacity: .45;
+  }
+
+  75% {
+    opacity: .55;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  */
+/* line 166, ../../src/scss/core/_app.scss */
 .command-center {
   max-width: 1200px;
   margin: 0 auto;
 }
 @media (max-width: 50em) {
-  /* line 33, ../../src/scss/core/_app.scss */
+  /* line 166, ../../src/scss/core/_app.scss */
   .command-center {
     padding: 0 1.5em;
   }
@@ -1455,8 +1730,68 @@ body {
 }
 /* line 23, ../../src/scss/components/_connection-status.scss */
 .connection-status .not-connected {
+  -webkit-animation: ThunderCommander_connection-status_not-connected 0.05s infinite ease-in-out;
+  -moz-animation: ThunderCommander_connection-status_not-connected 0.05s infinite ease-in-out;
+  -o-animation: ThunderCommander_connection-status_not-connected 0.05s infinite ease-in-out;
+  animation: ThunderCommander_connection-status_not-connected 0.05s infinite ease-in-out;
   color: #94133a;
   box-shadow: inset 0 0 0 0.15em rgba(148, 19, 58, 0.5);
+}
+
+@-webkit-keyframes ThunderCommander_connection-status_not-connected {
+  /* line 35, ../../src/scss/components/_connection-status.scss */
+  0%, 25%, 100% {
+    background: #010101;
+    color: inherit;
+  }
+
+  /* line 40, ../../src/scss/components/_connection-status.scss */
+  25%, 75% {
+    background: #94133a;
+    color: #010101;
+  }
+}
+
+@-moz-keyframes ThunderCommander_connection-status_not-connected {
+  /* line 35, ../../src/scss/components/_connection-status.scss */
+  0%, 25%, 100% {
+    background: #010101;
+    color: inherit;
+  }
+
+  /* line 40, ../../src/scss/components/_connection-status.scss */
+  25%, 75% {
+    background: #94133a;
+    color: #010101;
+  }
+}
+
+@-o-keyframes ThunderCommander_connection-status_not-connected {
+  /* line 35, ../../src/scss/components/_connection-status.scss */
+  0%, 25%, 100% {
+    background: #010101;
+    color: inherit;
+  }
+
+  /* line 40, ../../src/scss/components/_connection-status.scss */
+  25%, 75% {
+    background: #94133a;
+    color: #010101;
+  }
+}
+
+@keyframes ThunderCommander_connection-status_not-connected {
+  /* line 35, ../../src/scss/components/_connection-status.scss */
+  0%, 25%, 100% {
+    background: #010101;
+    color: inherit;
+  }
+
+  /* line 40, ../../src/scss/components/_connection-status.scss */
+  25%, 75% {
+    background: #94133a;
+    color: #010101;
+  }
 }
 
 /* line 1, ../../src/scss/components/_radar.scss */

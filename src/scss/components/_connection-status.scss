@@ -23,9 +23,22 @@
   .not-connected {
     @extend %status;
 
+    @include animation(ThunderCommander_connection-status_not-connected .05s infinite ease-in-out);
     color: $color-red;
     box-shadow:
       inset 0 0 0 .15em rgba($color-red, .5)
     ;
+  }
+}
+
+@include keyframes(ThunderCommander_connection-status_not-connected) {
+  0%, 25%, 100% {
+    background: $color-black;
+    color: inherit;
+  }
+
+  25%, 75% {
+    background: darken($color-red, 0%);
+    color: $color-black;
   }
 }
